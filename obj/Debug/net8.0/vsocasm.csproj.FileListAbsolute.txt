@@ -1,0 +1,14 @@
+C:\Users\amber\source\repos\vsocasm\bin\Debug\net8.0\vsocasm.exe
+C:\Users\amber\source\repos\vsocasm\bin\Debug\net8.0\vsocasm.deps.json
+C:\Users\amber\source\repos\vsocasm\bin\Debug\net8.0\vsocasm.runtimeconfig.json
+C:\Users\amber\source\repos\vsocasm\bin\Debug\net8.0\vsocasm.dll
+C:\Users\amber\source\repos\vsocasm\bin\Debug\net8.0\vsocasm.pdb
+C:\Users\amber\source\repos\vsocasm\obj\Debug\net8.0\vsocasm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amber\source\repos\vsocasm\obj\Debug\net8.0\vsocasm.AssemblyInfoInputs.cache
+C:\Users\amber\source\repos\vsocasm\obj\Debug\net8.0\vsocasm.AssemblyInfo.cs
+C:\Users\amber\source\repos\vsocasm\obj\Debug\net8.0\vsocasm.csproj.CoreCompileInputs.cache
+C:\Users\amber\source\repos\vsocasm\obj\Debug\net8.0\vsocasm.dll
+C:\Users\amber\source\repos\vsocasm\obj\Debug\net8.0\refint\vsocasm.dll
+C:\Users\amber\source\repos\vsocasm\obj\Debug\net8.0\vsocasm.pdb
+C:\Users\amber\source\repos\vsocasm\obj\Debug\net8.0\vsocasm.genruntimeconfig.cache
+C:\Users\amber\source\repos\vsocasm\obj\Debug\net8.0\ref\vsocasm.dll

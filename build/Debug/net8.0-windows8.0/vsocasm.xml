@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>vsocasm</name>
+    </assembly>
+    <members>
+        <member name="T:vsocasm.CommandLine.AliasArgument">
+            <summary>Argument that acts as an alias for another argument.</summary>
+        </member>
+        <member name="M:vsocasm.CommandLine.AliasArgument.#ctor(vsocasm.CommandLine.Argument)">
+            <summary>Initializes a new instance of the <see cref="T:vsocasm.CommandLine.AliasArgument"/> class.</summary>
+            <param name="entry">The argument this alias should mirror.</param>
+        </member>
+        <member name="M:vsocasm.CommandLine.AliasArgument.GetValue``1">
+            <summary>Gets the value of this argument.</summary>
+            <returns>The argument's value.</returns>
+        </member>
+        <member name="M:vsocasm.CommandLine.AliasArgument.SetValue``1(``0)">
+            <summary>Sets the value for this argument.</summary>
+            <param name="value">The value to set.</param>
+        </member>
+        <member name="P:vsocasm.CommandLine.AliasArgument.DefaultValue">
+            <summary>
+            The default value that will be used if no value was passed on the command line.
+            </summary>
+            <remarks>Using this when <see cref="P:vsocasm.CommandLine.AliasArgument.IsRequired"/> is set will have no effect.</remarks>
+        </member>
+        <member name="P:vsocasm.CommandLine.AliasArgument.IsRequired">
+            <summary>
+            Flag indicating whether this argument is required, i.e. must be provided via the command line.
+            </summary>
+        </member>
+        <member name="M:vsocasm.CommandLine.AliasArgument.Validate(System.Object)">
+            <summary>Validates the specified value.</summary>
+            <param name="value">The value to validate.</param>
+            <returns><c>true</c> if <paramref name="value"/> is valid; otherwise <c>false</c>.</returns>
+        </member>
+        <member name="P:vsocasm.CommandLine.Argument.DefaultValue">
+            <summary>
+            The default value that will be used if no value was passed on the command line.
+            </summary>
+        </member>
+        <member name="P:vsocasm.CommandLine.Argument.IsRequired">
+            <summary>
+            Flag indicating whether this argument is required, i.e. must be provided via the command line.
+            </summary>
+        </member>
+        <member name="P:vsocasm.CommandLine.Argument.Processor">
+            <summary>A method that can be executed when the command line arguments are processed.</summary>
+        </member>
+        <member name="P:vsocasm.CommandLine.Argument.Validator">
+            <summary>A method that can be used to validate a value for this argument.</summary>
+        </member>
+        <member name="M:vsocasm.CommandLine.Argument.Validate(System.Object)">
+            <summary>Validates the specified value.</summary>
+            <param name="value">The value to validate.</param>
+            <returns><c>true</c> if <paramref name="value"/> is valid; otherwise <c>false</c>.</returns>
+        </member>
+        <member name="M:vsocasm.CommandLine.Argument.Process">
+            <summary>
+            Process the value by executing the associated processor function.
+            </summary>
+        </member>
+        <member name="M:vsocasm.CommandLine.CommandLineArgs.Parse(System.String[])">
+            <summary>Processes a set of command line arguments.</summary>
+            <param name="args">
+            Command line arguments to process. This is usally coming from your Main method.
+            </param>
+            <returns>
+            <c>true</c> if the arguments in <paramref name="args"/> are valid; otherwise
+            <c>false</c> .
+            </returns>
+        </member>
+    </members>
+</doc>

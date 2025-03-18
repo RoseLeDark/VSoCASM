@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "vsocasm": {
+      "commandName": "Project",
+      "commandLineArgs": "-d -i main.asm -a x86",
+      "nativeDebugging": false,
+      "jsWebView2Debugging": false,
+      "sqlDebugging": false
+    }
+  }
+}

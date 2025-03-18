@@ -112,81 +112,12 @@ namespace vsocasm
             m_lenghtFull = lenght;
             m_langhtHalf = lenght / 2;
 
-            Add(new Instruction("NOP",      4, 0, m_lenghtFull)); // OP(4)
-            Add(new Instruction("STI",      4, 0, m_lenghtFull)); // OP(4)
-            Add(new Instruction("CLI",      4, 0, m_lenghtFull)); // OP(4)
-            Add(new Instruction("PUSH",     1, m_lenghtFull)); // OP (4) R@#(2) 3(4)
-            Add(new Instruction("POP",      1, m_lenghtFull)); // OP (4) R@#(2) 3(4)
-            Add(new Instruction("PUSHF",    0, m_lenghtFull)); // OP (4)  Push Flags
-            Add(new Instruction("POPF",     1, m_lenghtFull)); // OP (4) R@#(2) 3(4) Pop Flags
-            Add(new Instruction("SHL",      1, m_lenghtFull)); // OP (4) R@#(2) 3(4) Shift Left
-            Add(new Instruction("SHR",      1, m_lenghtFull)); // OP (4) R@#(2) 3(4) Shift Right
-            Add(new Instruction("PEEK",     1, m_lenghtFull)); // OP (4) R@#(2) 3(4)
-            Add(new Instruction("HLT",      0, m_lenghtFull));
-            Add(new Instruction("JMP",      0, 1, m_lenghtFull));
-            Add(new Instruction("LCK",      9, 1, m_lenghtFull)); // Lock  OP(4) T(1)V(4)  LCK Variable
-            Add(new Instruction("UCK",      9, 1, m_lenghtFull)); // ULock  OP(4) T(1)V(4)  UCK Variable
-            Add(new Instruction("ADD",      3, m_lenghtFull)); // ADD return to V1 not to AX OP(2) T(2)V(4)  T(2)V(4) T(2)V(4)
-            Add(new Instruction("SUB",      3, m_lenghtFull)); // SUB return to V1 not to AX OP(2) T(1)V(4)  T(1)V(4) T(1)V(4) 
-            Add(new Instruction("MUL",      3, m_lenghtFull)); // MUL return to V1 not to AX OP(2) T(1)V(4)  T(1)V(4) T(1)V(4) 
-            Add(new Instruction("DIV",      3, m_lenghtFull)); // DIV return to V1 not to AX OP(2) T(1)V(4)  T(1)V(4) T(1)V(4) 
-            Add(new Instruction("EXP",      3, m_lenghtFull));
-            Add(new Instruction("SQR", 3, m_lenghtFull));
 
             // MEM
             Add(new Instruction("XMEM", 3, m_lenghtFull)); // Set Memore OP(2) X=T(2)V(4) Y= T(2)V(4) Mem= T(2)V(4)
             Add(new Instruction("GMEM", 3, m_lenghtFull)); // Get Mem Pos X Y from Addrs on RF
 
-            Add(new Instruction("MOV",      3, m_lenghtFull)); // MOV(4) T(1)V(4) T(1)V(4) T(1)V(4)
-            Add(new Instruction("CLR",      1, m_lenghtFull)); // register, pointer, flag löschen
-            Add(new Instruction("OR",       3, m_lenghtFull)); //+ OP(4) T(1)V(4)  T(1)V(4) T(1)V(4)
-            Add(new Instruction("XOR",      3, m_lenghtFull)); //+ OP(4) T(1)V(4)  T(1)V(4) T(1)V(4)
-            Add(new Instruction("AND",      3, m_lenghtFull)); //+ OP(4) T(1)V(4)  T(1)V(4) T(1)V(4)
-            Add(new Instruction("NAND",     3, m_lenghtFull)); //  OP(4) T(1)V(4)  T(1)V(4) T(1)V(4)
-            Add(new Instruction("NOR",      3, m_lenghtFull)); //+ OP(4) T(1)V(4)  T(1)V(4) T(1)V(4)
-            Add(new Instruction("NXOR",     3, m_lenghtFull)); //+ OP(4) T(1)V(4)  T(1)V(4) T(1)V(4)
-            Add(new Instruction("NOT",      3, m_lenghtFull)); //+ OP(4) T(1)V(4)  T(1)V(4) 
-            Add(new Instruction("RET",      0, 0, m_lenghtFull));
-            Add(new Instruction("CALL",     0, 1, m_lenghtFull));
-            
-            Add(new Instruction("JC",       0, 0, m_lenghtFull)); // Jump Carry OP(4) 
-            Add(new Instruction("JNC",      0, 0, m_lenghtFull)); // Jump not carry
-            Add(new Instruction("JO",       0, 0, m_lenghtFull)); // Jump overflow
-            Add(new Instruction("JNO",      0, 0, m_lenghtFull)); // Jump not overflow 
-            Add(new Instruction("INC",      1, m_lenghtFull));
-            Add(new Instruction("DEC",      1, m_lenghtFull));
-            Add(new Instruction("INV",      1, m_lenghtFull)); // register, flags, pointer invetieren
-            Add(new Instruction("STO",      1, m_lenghtFull)); // register, flags, pointer = 1
-            //
-            Add(new Instruction("JG",       19, 0, m_lenghtFull)); // Jump greater:  OP(4) T(1)V(4) > T(1)V(4) T(1)V(4)
-            Add(new Instruction("JGE",      19, 0, m_lenghtFull)); // Jump greater equel  OP(4) T(1)V(4) >= T(1)V(4) T(1)V(4) 
-            Add(new Instruction("JL",       19, 0, m_lenghtFull)); // Jump less OP(4) T(1)V(4) < T(1)V(4) T(1)V(4) 
-            Add(new Instruction("JLE",      19, 0, m_lenghtFull)); // Jump less equel OP(4) T(1)V(4) <= T(1)V(4) T(1)V(4) 
-
-
-            Add(new Instruction("HADD",     3, m_langhtHalf)); // HADD return to V1 not to AX OP(4) T(1)V(2)  T(1)V(2) T(1)V(2)
-            Add(new Instruction("HSUB",     3, m_langhtHalf)); // HSUB return to V1 not to AX OP(4) T(1)V(2)  T(1)V(2) T(1)V(2) 
-            Add(new Instruction("HMUL",     3, m_langhtHalf)); // HMUL return to V1 not to AX OP(4) T(1)V(2)  T(1)V(2) T(1)V(2) 
-            Add(new Instruction("HDIV",     3, m_langhtHalf)); // HDIV return to V1 not to AX OP(4) T(1)V(2)  T(1)V(2) T(1)V(2) 
-            Add(new Instruction("HINC",     1, m_langhtHalf));
-            Add(new Instruction("HDEC",     1, m_langhtHalf));
-            Add(new Instruction("HINV",     1, m_langhtHalf)); // register, flags, pointer invetieren
-            Add(new Instruction("HEXP",     3, m_langhtHalf)); // HEXP return to V1 not to AX OP(4) T(1)V(2)  T(1)V(2) T(1)V(2) 
-            Add(new Instruction("HSQR", 3, m_lenghtFull));
-
-            // Float
-            Add(new Instruction("FADD", 16, 3, m_lenghtFull * 2)); // ADD return to V1 not to AX OP(2) T(2)V(4)  T(2)V(4) T(2)V(4)
-            Add(new Instruction("FSUB", 16, 3, m_lenghtFull * 2)); // SUB return to V1 not to AX OP(2) T(1)V(4)  T(1)V(4) T(1)V(4) 
-            Add(new Instruction("FMUL", 16, 3, m_lenghtFull * 2)); // MUL return to V1 not to AX OP(2) T(1)V(4)  T(1)V(4) T(1)V(4) 
-            Add(new Instruction("FDIV", 16, 3, m_lenghtFull * 2)); // DIV return to V1 not to AX OP(2) T(1)V(4)  T(1)V(4) T(1)V(4)
-            Add(new Instruction("FINC", 8, 1, m_lenghtFull * 2));
-            Add(new Instruction("FDEC", 8, 1, m_lenghtFull * 2));
-            Add(new Instruction("FINV", 8, 1, m_lenghtFull * 2)); // register, flags, pointer invetieren
-            Add(new Instruction("FMOV", 40, 5, m_lenghtFull * 2)); // MOV(4) F(8) F(8) F(8) F(8) R(4)  - FMOV 21.0f, 6.0f, 12.0f, 18,0f, F0
-            Add(new Instruction("FEXP", 16, 3, m_lenghtFull * 2)); // Exponent FEXP(4) A(4), B(4), ERG(4) - Erg = A^B
-            Add(new Instruction("FSQR", 16, 3, m_lenghtFull * 2)); // Würzel X von Arg ERG = Würzel B von A
-
-
+        
 
             // Extended Math
 
