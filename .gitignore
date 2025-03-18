@@ -365,3 +365,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /obj/Debug/net8.0-windows8.0/vsocasm.AssemblyInfo.cs
+/obj/Debug/net8.0-windows8.0/vsocasm.AssemblyInfoInputs.cache
