@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("vsocasm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05dd72ae9e2c675dd2416cebeae20ad1db9a8790")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6dbfa8c9b9b9b914be00456c0c51cce1fc04b0c8")]
 [assembly: System.Reflection.AssemblyProductAttribute("vsocasm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("vsocasm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
