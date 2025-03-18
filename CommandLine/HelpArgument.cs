@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace vsocasm.CommandLine
 {
-    internal class HelpArgument : Argument<string>
+    internal class HelpArgument : FlagArgument
     {
-        public HelpArgument()  : base(" ", false) {
+        public HelpArgument()  : base(false,false) {
             //Processor.ad
+            base.NeedsValue = false;
         }
 
         protected internal override bool Validate(object value)  {

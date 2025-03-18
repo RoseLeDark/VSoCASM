@@ -57,6 +57,11 @@ namespace vsocasm.CommandLine
             for(int i=0; i<args.Length; i++)
             {
                var _arg = args[i];
+                if (_arg == "-h" || _arg == "--help")
+                {
+                    ShowHelp();
+                    return false;
+                }
                 if (_arg.StartsWith('-'))
                 {
                     var argument = GetArgument(_arg);
@@ -66,7 +71,7 @@ namespace vsocasm.CommandLine
                         ShowHelp();
                         return false;
                     }
-                    ;
+                    
 
                     if (argument.NeedsValue == true)
                     {
@@ -80,6 +85,7 @@ namespace vsocasm.CommandLine
                     else
                     {
                         argument.SetValue<bool>(true);
+                        
                     }
                     argument.Process();
                 } 
@@ -108,12 +114,6 @@ namespace vsocasm.CommandLine
             }
             return null;
         }
-
-        private string GetArgName(string arg)
-        {
-            return string.Join("", arg.Split('-'));
-        }
-
         private void ShowHelp()
         {
             Console.WriteLine("Usage: " + ExecutableName + " [Arguments]");
