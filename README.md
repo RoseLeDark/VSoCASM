@@ -27,14 +27,14 @@ The EVM-ISA is designed for **Embedded VM systems** – minimal, extensible, and
 ```asm
 #include "system.inc"
 
-ORG  $H
+ORG  16H
 
-.dim Foo
+.dim Foo REGISTER_SIZE
 .dim Bar = "Hallo Welt!"
 
 ORG 16h
 
-	MOV RC, .Interrupt ; Interrupt address pointing to label: Interrupt
+	MOV RC, .Interrupt ; Interrupt address pointing to Regiter RC
 Main:
 	ADD #5d, #3d, R1  ; R1 = 5 + 3 (decimal)
 	MOV R0, R1        ; move R1 to R0
@@ -91,7 +91,7 @@ The **EUPL** is:
 - The license offers legal certainty within the EU.
 
 👉 Full license text:  
-[European Union Public License (EUPL)](LICENSE.txt)  
+[European Union Public License (EUPL)](LICENSE)  
 Or online: [https://eupl.eu/](https://eupl.eu/)
 
 ---
@@ -99,18 +99,15 @@ Or online: [https://eupl.eu/](https://eupl.eu/)
 ### ToDos / Suggestions
 - Maybe add a chapter about **Registers** (`README.md#register`)?  
   For example:
-  ```markdown
   ## Registers
   - R0-Rn: General-purpose registers
   - F0-F3: Float registers
   - XM0-XM3: eXtended Math float registers
   - ...
-  ```
 - An **Instruction Overview** (`README.md#instructions`) could also be helpful:
-  ```markdown
   ## Instructions
   - `MOV`: Copies values
   - `ADD`: Adds values
   - `HLT`: Halts the VM
   - ...
-  ```
+ 
