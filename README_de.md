@@ -1,7 +1,3 @@
-Sehr gern! Hier ist deine README.md, überarbeitet mit Inhaltsverzeichnis, besserer Struktur und ein bisschen mehr Klarheit, ohne den Charakter zu verlieren. Ich habe die Sprache leicht angepasst, damit es technisch und verständlich bleibt.
-
----
-
 # VM-SoC ISA Assembler (`vsocasm`)
 
 Ein Tool zum Kompilieren von Code für die **EVM-ISA** (Embedded VM Instruction Set) Architektur.  
@@ -119,11 +115,4 @@ Oder online: [https://eupl.eu/](https://eupl.eu/)
   - ...
   ```
 
----
 
-## Vorschau-Struktur für den README-Link
-Ein internes Inhaltsverzeichnis kannst du mit `[Register](#register)` oder `[Instruktionen](#instruktionen)` erweitern, wenn du weitere Sektionen einfügst.
-
----
-
-👉 Wenn du willst, kann ich dir eine **erweiterte Vorlage** mit Registern und Instruktionen bauen, oder wir skizzieren gleich ein kleines Handbuch! 😊
